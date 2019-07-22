@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 import './App.sass';
 import interact from 'interactjs';
 
+//icons
 import RememberMe from "./assets/512.png";
+import Projects from "./assets/pro.png"
 // target elements with the "draggable" class
 interact('.draggable')
   .draggable({
@@ -57,7 +59,18 @@ class App extends Component {
     return (
     <>
     <div className="desktop">
-          <img class="draggable" src={RememberMe} id="drag-1"/>
+      <div class="draggable">
+        <div id="drag-1">
+          <img src={RememberMe}/>
+          <h3>About Me</h3>
+        </div>
+      </div>
+      <div class="draggable">
+        <div id="drag-2">
+          <img src={Projects}/>
+          <h3>Projects</h3>
+        </div>
+        </div>
     </div>
     </>
     );
