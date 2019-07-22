@@ -56,10 +56,8 @@ class App extends Component {
   render() {
     return (
     <>
-    <div className="body">
-        <div class="draggable">
-          <img src={RememberMe} id="drag-1"/>
-        </div>
+    <div className="desktop">
+          <img class="draggable" src={RememberMe} id="drag-1"/>
     </div>
     </>
     );
