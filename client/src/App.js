@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import './App.sass';
-
+import Desktop from './comp/Desktop'
 class App extends Component {
   render() {
     return (
     <>
-    <body>
-    <div className="Title">⚠️ COMING + SOON ⚠️</div>
-    </body>
+    <div className="Title">⚠️</div>
     </>
     );
   }
