@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.sass';
-import interact from 'interactjs'
+import interact from 'interactjs';
 
+import RememberMe from "./assets/512.png";
 // target elements with the "draggable" class
 interact('.draggable')
   .draggable({
@@ -55,13 +56,11 @@ class App extends Component {
   render() {
     return (
     <>
-    <div id="drag-1" class="draggable">
-  <p> You can drag one element </p>
-</div>
-<div id="drag-2" class="draggable">
-  <p> with each pointer </p>
-</div>
-    <div className="Title" draggable>⚠️</div>
+    <div className="body">
+        <div class="draggable">
+          <img src={RememberMe} id="drag-1"/>
+        </div>
+    </div>
     </>
     );
   }
