@@ -1,41 +1,78 @@
-// import React, { Component } from 'react'
+import React, { Component } from 'react'
+import interact from 'interactjs';
+import './desktop.sass'
 
-// import { render } from 'react-dom'
-// import Interactive from 'react-interactjs'
+//icons
+import RememberMe from "../assets/512.png";
+import Projects from "../assets/pro.png"
 
+//draggle funtion
+interact('.draggable')
+    .draggable({
+    // enable inertial throwing
+    inertia: true,
+    // keep the element within the area of it's parent
+    modifiers: [
+        interact.modifiers.restrictRect({
+        restriction: 'parent',
+        endOnly: true
+        })
+    ],
+    // enable autoScroll
+    autoScroll: true,
 
-// export default class Desktop extends Component {
-//     render() {
-//         return (
-//             <div id="container" />
-    
-//         )
-//     }
-// }
+    // call this function on every dragmove event
+    onmove: dragMoveListener,
+    // call this function on every dragend event
+    onend: function (event) {
+        var textEl = event.target.querySelector('p')
 
+        textEl && (textEl.textContent =
+        'moved a distance of ' +
+        (Math.sqrt(Math.pow(event.pageX - event.x0, 2) +
+                    Math.pow(event.pageY - event.y0, 2) | 0))
+            .toFixed(2) + 'px')
+    }
+    })
 
-// const draggableOptions = {
-//      onmove: event => {
-//         const target = event.target
-//       // keep the dragged position in the data-x/data-y attributes
-//       const x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx
-//       const y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy
+function dragMoveListener (event) {
+  var target = event.target
+  // keep the dragged position in the data-x/data-y attributes
+  var x = (parseFloat(target.getAttribute('data-x')) || 0) + event.dx
+  var y = (parseFloat(target.getAttribute('data-y')) || 0) + event.dy
 
-//       // translate the element
-//       target.style.webkitTransform =
-//       target.style.transform =
-//         'translate(' + x + 'px, ' + y + 'px)'
+  // translate the element
+  target.style.webkitTransform =
+    target.style.transform =
+      'translate(' + x + 'px, ' + y + 'px)'
 
-//       // update the posiion attributes
-//       target.setAttribute('data-x', x);
-//       target.setAttribute('data-y', y);
-//     }
-// }
+  // update the posiion attributes
+  target.setAttribute('data-x', x)
+  target.setAttribute('data-y', y)
+}
 
-// const example = (
-//     <Interactive draggable draggableOptions={draggableOptions}>
-//         <img src="https://pbs.twimg.com/profile_images/526421493731717120/INda0NaM.png" height={100} width={100}/>
-//     </Interactive>
-// )
+// this is used later in the resizing and gesture demos
+window.dragMoveListener = dragMoveListener
 
-// render(example, document.getElementById('container'));
+export default class Desktop extends Component {
+    render() {
+        return (
+            <>
+            <div className="desktop">
+    <div class="draggable">
+        <div id="drag-1">
+        <img src={RememberMe}/>
+        <h3>About Me</h3>
+        </div>
+    </div>
+    <div class="draggable">
+        <div id="drag-2">
+        <img src={Projects}/>
+        <h3>Projects</h3>
+        </div>
+        </div>
+    </div>
+            </>
+        )
+    }
+}
