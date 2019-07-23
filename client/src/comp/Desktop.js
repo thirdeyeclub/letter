@@ -8,6 +8,8 @@ import Projects from "../assets/pro.png";
 import Rwq from "../assets/id.png";
 import liveSafe from "../assets/livesafe.png";
 import Slackr from "../assets/slackr.png"
+import Contact from "../assets/mail.png"
+
 //draggle funtion
 interact(".draggable").draggable({
   // enable inertial throwing
@@ -99,6 +101,13 @@ export default class Desktop extends Component {
             <div id="drag-2" >
               <img src={Slackr} />
               <h3>Slackr</h3>
+            </div>
+          </div>
+
+          <div class="draggable">
+            <div id="drag-2" >
+              <img src={Contact} />
+              <h3>Contact</h3>
             </div>
           </div>
 
