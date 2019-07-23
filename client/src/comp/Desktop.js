@@ -71,42 +71,42 @@ export default class Desktop extends Component {
         <div className="desktop">
           <div class="draggable">
             <div id="drag-1">
-              <img src={RememberMe} />
+              <img src={RememberMe} alt="x" />
               <h3>About Me</h3>
             </div>
           </div>
 
           <div class="draggable">
             <div id="drag-2">
-              <img src={Projects} />
+              <img src={Projects} alt="x" />
               <h3>Projects</h3>
             </div>
           </div>
 
           <div class="draggable">
             <div id="drag-2">
-              <img src={Rwq} />
+              <img src={Rwq} alt="x"/>
               <h3>Resume</h3>
             </div>
           </div>
 
           <div class="draggable">
             <div id="drag-2">
-              <img src={liveSafe} onDoubleClick={openLiveSafe}/>
+              <img src={liveSafe}alt="x" onDoubleClick={openLiveSafe}/>
               <h3>liveSafe</h3>
             </div>
           </div>
 
-          <div class="draggable" onDoubleClick={openSlackr}>
+          <div class="draggable" >
             <div id="drag-2" >
-              <img src={Slackr} />
+              <img src={Slackr}alt="x" onDoubleClick={openSlackr}/>
               <h3>Slackr</h3>
             </div>
           </div>
 
           <div class="draggable">
             <div id="drag-2" >
-              <img src={Contact} />
+              <img src={Contact} alt="x"/>
               <h3>Contact</h3>
             </div>
           </div>
