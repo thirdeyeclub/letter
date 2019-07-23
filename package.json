@@ -1,4 +1,12 @@
 {
+  "name": "blount.dev",
+  "version": "0.0.2",
+  "description": "my letter to the world",
+  "main": "index.js",
+  "repository": "\"\"",
+  "author": "Indie Blount",
+  "license": "MIT",
+  "private": true,
   "dependencies": {
     "netlify": "^2.4.6",
     "netlify-cli": "^2.11.23",
