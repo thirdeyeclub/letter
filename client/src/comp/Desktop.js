@@ -1,4 +1,6 @@
 import React from "react";
+import Draggable from 'react-draggable';
+
 import "./desktop.sass";
 
 //icons
@@ -10,46 +12,57 @@ import Slackr from "../assets/slackr.png"
 import Contact from "../assets/mail.png"
 
 
+
 const openSlackr = () =>{window.location.href = 'https://slackrs-app.netlify.com/'}
 
 const openLiveSafe = ()=>{window.location.href ='https://livesafe.netlify.com/'}
-export default function Desktop() {
-  
 
+
+export default function Desktop() {
     return (
       <>
         <div className="desktop">
-
+          <Draggable>
             <div className="draggable" id="drag">
-              <img src={RememberMe} alt="x" />
-              <h5>About Me</h5>
+              <img src={RememberMe} alt="icon" className="icon" />
+              <p>About</p>
             </div>
+          </Draggable>
 
+          <Draggable>
             <div id="drag" className="draggable">
-              <img src={Projects} alt="x" />
-              <h5>Projects</h5>
+              <img src={Projects} alt="icon"  className="icon"/>
+              <p>Projects</p>
             </div>
+          </Draggable>
 
+          <Draggable>
             <div id="drag" className="draggable">
-              <img src={Rwq} alt="x"/>
-              <h5>Resume</h5>
+              <img src={Rwq} alt="icon" className="icon"/>
+              <p>Resume</p>
             </div>
-
+          </Draggable>
+          
+          <Draggable>
             <div id="drag" className="draggable">
-              <img src={liveSafe}alt="x" onDoubleClick={openLiveSafe}/>
-              <h5>liveSafe</h5>
+              <img src={liveSafe} alt="icon" onDoubleClick={openLiveSafe} className="icon"/>
+              <p>liveSafe</p>
             </div>
+          </Draggable>
 
-        
+          <Draggable>
             <div id="drag" className="draggable">
-              <img src={Slackr}alt="x" onDoubleClick={openSlackr}/>
-              <h5>Slackr</h5>
+              <img src={Slackr} alt="icon" onDoubleClick={openSlackr} className="icon"/>
+              <p>Slackr</p>
             </div>
+          </Draggable>
 
-          <div id="drag" className="draggable">
-              <img src={Contact} alt="x"/>
-              <h5>Contact</h5>
-          </div>
+          <Draggable>
+            <div id="drag" className="draggable">
+              <img src={Contact} alt="icon" className="icon"/>
+              <p>Contact</p>
+            </div>
+          </Draggable>
 
         </div>
       </>
