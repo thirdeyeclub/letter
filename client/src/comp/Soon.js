@@ -4,7 +4,7 @@ export default class Soon extends Component {
     render() {
         return (
             <div className="Title">
-                🔓
+                coming 🔓 soon
             </div>
         )
     }

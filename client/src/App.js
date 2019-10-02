@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.sass';
-import Desktop from './comp/Desktop'
 import Soon from "./comp/Soon"
 
 
