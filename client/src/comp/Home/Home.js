@@ -1,6 +1,9 @@
 import React, {useState} from 'react'
 import './home.sass'
-import Picture from '../../assets/me.jpg'
+
+import Intro from './Pages/Intro';
+import Project from './Pages/Projects';
+import Contact from './Pages/Contact';
 
 // this will handle the second thing the user sees the home page
 // i want to send them in different paths to get to "know me"
@@ -43,21 +46,21 @@ export default function Home() {
 
     return (
         <div className="home">
-            {Bool.gate_one === false ? <img src={Picture} alt="admin" className="picMain" onClick={openBio}/> : null  }
-            {Bool.gate_one === true ? 
-                <div className="about">
-                    <img src={Picture} alt="admin" onClick={openBio}/>
-                    <div className="info">
-                        <h1>Welcome</h1>
-                        <h3>My name is Taylor Blount</h3>
-                    </div>
+            <div className="nav-bar">
+                <div>
+                    {/* side bar */}
+                <div className="picture-box">picture box</div>
+                <h5 className="link" onClick={openBio}>Home</h5>
+                <h5 className="link" onClick={openProjects}>Projects</h5>
+                <h5 className="link" onClick={openContact}>Make Contact</h5>
                 </div>
-                : null}
-            <div className="link">
-                <h2 onClick={openProjects}> ◀️ Projects </h2>
-                <h2 onClick={openContact}> ▶️ Make Contact</h2>
             </div>
-           
+
+            <div className="main">
+            {Bool.gate_one ? <Intro className="slide"/> : null}
+            {Bool.gate_two ? <Project className="slide"/> : null}
+            {Bool.gate_three ? <Contact className="slide"/> : null}
+            </div>
         </div>
     )
 }
