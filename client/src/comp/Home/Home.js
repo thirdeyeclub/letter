@@ -13,7 +13,7 @@ import Contact from './Pages/Contact';
 export default function Home() {
 
     const [Bool, setBool] = useState({
-        gate_one: false , //  bio pop up
+        gate_one: true , //  bio pop up
         gate_two: false , // projects pop up
         gate_three: false // contact pop up
                                     })
@@ -26,23 +26,17 @@ export default function Home() {
     const openBio = e =>{
         if(Bool.gate_one === false){
             setBool({gate_one: true, gate_two: false, gate_three:false})}
-        else{
-            setBool({gate_one : false, gate_two: false, gate_three:false})
-        }}
+    }
 
     const openProjects = e =>{
         if(Bool.gate_two === false){
             setBool({gate_two: true, gate_one: false, gate_three: false})}
-        else{
-            setBool({gate_two : false, gate_one: false, gate_three: false})
-        }}
+       }
 
     const openContact = e =>{
         if(Bool.gate_three === false){
             setBool({gate_three: true, gate_one: false, gate_two: false})}
-        else{
-            setBool({gate_three : false, gate_one: false, gate_two: false})
-        }}
+        }
 
     return (
         <div className="home">
@@ -56,7 +50,7 @@ export default function Home() {
                 </div>
             </div>
 
-            <div className="main">
+            <div className="main" id="main">
             {Bool.gate_one ? <Intro className="slide"/> : null}
             {Bool.gate_two ? <Project className="slide"/> : null}
             {Bool.gate_three ? <Contact className="slide"/> : null}

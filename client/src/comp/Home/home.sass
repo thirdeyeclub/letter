@@ -1,5 +1,4 @@
 .home
-    display: inline
 
 .about 
     opacity: .95
@@ -31,6 +30,7 @@
     top: 0
     left: 0
     overflow-x: hidden;
+    transition: .6s
     h5
         border-radius: 10px
         cursor: pointer
@@ -40,16 +40,26 @@
         text-align: center
 
 .nav-bar:hover
+    transition: .6s
     width: 22%
+
 
 .link:hover
     opacity: .55
 
 .main
     display: flex
-    margin-left: 25%
+    margin-left: 22%
     font-size: 28px
     padding: 0px 10px
+    border: solid red 1px
+    height: auto
+    transition: .6s
+    background: white
+.main:hover
+    margin-left: 5%
+    border: solid green 1px
+    transition: .6s
 
 .picture-box
     border: 1px solid red
