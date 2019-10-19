@@ -1,4 +1,6 @@
 import React from 'react'
+import data from '../../../data/projDat.js'
+import './projects.sass'
 
 export default function Projects() {
     return (
@@ -6,13 +8,17 @@ export default function Projects() {
             <div className="title">
                 <h2>Projects</h2>
                 <p>descrption</p>
+                ------------------
             </div>
             <div className="content">
-            livesafe <br/>
-            supp2u<br/>
-            backend for web pt 7 bw 2<br/>
-            slackr<br/>
-            mentor me
+            {data.map( alpha => {
+            return  <div key={alpha.id} className="pCard">
+                        <h5 className="title">{alpha.title}</h5>
+                        <p>{alpha.descriptor}</p>
+                        <div>{alpha.picture}</div>
+                        <p>{JSON.stringify(alpha.tags)}</p>
+                    </div>
+            })}
             </div>
 
         </div>
