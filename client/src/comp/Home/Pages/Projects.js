@@ -7,22 +7,28 @@ export default function Projects() {
         <div className="page">
 
             <div className="title">
-                <h2>Projects</h2>
-                <p>descrption</p>
-                ------------------
+                <h3>My Recent Work</h3>
             </div>
 
             <div className="content">
                 {/* map function to create each card  */}
             {data.map( alpha => {
+
             return  <div key={alpha.id} className="pCard">
 
                         <h5 className="title">{alpha.title}</h5>
-                        <p>{alpha.descriptor}</p>
+                        <div className="descriptor">{alpha.descriptor}</div>
+
                         <div className="image-cart">
-                        <img alt="of project" key={alpha.picture} src={require(`../../../assets/${alpha.picture}.png`)} className="picture" />
+                            {/* <button className="image-next-button"></button> */}
+                            <img alt="of project" key={alpha.picture} src={require(`../../../assets/${alpha.picture}.png`)} className="picture" />
+                            {/* <button className="image-next-button"></button> */}
                         </div>
-                        <p>{JSON.stringify(alpha.tags)}</p>
+
+                        <div className="tag-div">
+                            {alpha.tags.map(t=>(<i className="tag" key={t}> {t} </i>))}
+                        </div>
+
                     </div>
             })}
             </div>
