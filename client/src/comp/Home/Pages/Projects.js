@@ -1,14 +1,7 @@
-import React ,{useState} from 'react'
+import React from 'react'
 import './projects.sass'
 
 import data from '../../../data/projDat.js'
-
-// all project pages
-import Safe from './project-pages/Safe.js'
-import Sup from './project-pages/Sup.js'
-import VR from './project-pages/VR.js'
-import Slack from './project-pages/Slack.js'
-import Mm from './project-pages/Mm.js'
 
 export default function Projects() {
     
