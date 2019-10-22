@@ -5,6 +5,8 @@ import Intro from './Pages/Intro';
 import Project from './Pages/Projects';
 import Contact from './Pages/Contact';
 
+import Pages from '../Router'
+
 // this will handle the second thing the user sees the home page
 // i want to send them in different paths to get to "know me"
 // this will be a representation of your social mask
@@ -24,18 +26,15 @@ export default function Home() {
     //         there should be more than this but this is only the prototype 
 
     const openBio = e =>{
-        if(Bool.gate_one === false){
-            setBool({gate_one: true, gate_two: false, gate_three:false})}
+        window.location.href = '/'
     }
 
     const openProjects = e =>{
-        if(Bool.gate_two === false){
-            setBool({gate_two: true, gate_one: false, gate_three: false})}
+        window.location.href = '/check-this-out'
        }
 
     const openContact = e =>{
-        if(Bool.gate_three === false){
-            setBool({gate_three: true, gate_one: false, gate_two: false})}
+        window.location.href = '/work-with-me'
         }
 
     return (
@@ -51,9 +50,7 @@ export default function Home() {
             </div>
 
             <div className="main" id="main">
-            {Bool.gate_one ? <Intro className="slide"/> : null}
-            {Bool.gate_two ? <Project className="slide"/> : null}
-            {Bool.gate_three ? <Contact className="slide"/> : null}
+            <Pages />
             </div>
         </div>
     )
