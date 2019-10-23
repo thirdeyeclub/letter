@@ -22,7 +22,7 @@
 
 .main
     display: flex
-    margin-left: 22%
+    margin-left: 5%
     padding: 0px 10px
     border: solid red 1px
     height: auto
@@ -30,31 +30,78 @@
     background: white
 
 .main:hover
-    margin-left: 5%
     border: solid green 1px
     transition: .6s
 
 .nav-bar
-    background-color: grey
+    border-right: black 2px solid
+    background-color: #d3d3d3
     height: 100%
-    width: 5%
+    width: 50px
     position: fixed
     z-index: 1
     top: 0
     left: 0
     overflow-x: hidden
-    transition: .6s
-    h5
-        border-radius: 10px
-        cursor: pointer
-        border-right: solid 2px black
-        border-top: solid 2px black
-        margin-bottom: -20px
-        text-align: center
+    transition: 1.7s
+    b
+        opacity: 0
+    i
+        opacity: 0
+    #initials
+        border: solid black 2px
+        margin: 0 auto
+        width: 40px
+        font-weight: 555
+        background: #feffa3
+        position: relative
+        transition: 7s
+
+        
 
 .nav-bar:hover
-    transition: .6s
-    width: 22%
+    transition: 1.7s
+    width: 18%
+    b
+        transition: 8s
+        opacity: 1
+        z-index: 3
+    i 
+        transition: 8s
+        opacity: 1
+        z-index: 3
+    #initials
+        opacity: 0
+        transition: .1s
+    .picture-box
+        background: #a3feff
+        background-blend-mode: lighten
+        transition: 3s
+    h5 
+        transition: 3s
+        opacity: 1
+    img 
+        margin-left: 10px
+        
+.link
+    justify-content: space-around
+    display: flex
+    flex-direction: row
+    border-radius: 10px
+    cursor: pointer
+    border-right: solid 2px black
+    border-top: solid 2px black
+    
+    margin: 20px 5px
+    text-align: center
+    img 
+        margin-left: 40px
+        min-width: 30px
+        max-width: 30px
+    h5 
+        opacity: 0
+        transition: .3s
+    
 
 
 .link:hover
@@ -62,8 +109,13 @@
 
 
 .picture-box
-    border: 1px solid red
-    background-color: white
+    border-bottom: black 2px solid
+    border-right: black 2px solid
+    background: #ffd2a3
     height: 230px
     margin-bottom: 20%
     top: 0
+    text-align: center
+    i
+        font-size: 60%
+        

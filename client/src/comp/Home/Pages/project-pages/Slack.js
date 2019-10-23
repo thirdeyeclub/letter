@@ -3,7 +3,13 @@ import React from 'react'
 export default function Slack() {
     return (
         <div>
-            3
+slackr
+
+             project overview
+            solutions
+            links
+            tech stack
+            devblog
         </div>
     )
 }

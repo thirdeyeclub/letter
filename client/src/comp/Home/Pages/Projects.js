@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 import './projects.sass'
 
 import data from '../../../data/projDat.js'

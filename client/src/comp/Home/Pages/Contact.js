@@ -41,18 +41,20 @@ export default function Contact() {
                     onChange={changeHandler}/><br/>
 
                 <label>What is this regarding</label><br/>
-                <input className="input" 
-                type="textbox" 
-                placeholder="Email title..."
-                name="title"
-                onChange={changeHandler}/><br/>
+                <input 
+                    className="input" 
+                    type="textbox" 
+                    placeholder="Subject..."
+                    name="title"
+                    onChange={changeHandler}/><br/>
 
                 <label>What do you have to say:</label><br/>
-                <textarea className="input" 
-                type="textbox" 
-                placeholder="Email body..."
-                name="body"
-                onChange={changeHandler}/><br/>
+                <textarea 
+                    className="input" 
+                    type="textbox" 
+                    placeholder="Email body..."
+                    name="body"
+                    onChange={changeHandler}/><br/>
 
                 <button>send</button>
             </form>
