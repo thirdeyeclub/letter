@@ -3,13 +3,16 @@ import './projects.sass'
 
 import data from '../../../data/projDat.js'
 
+import divider from '../../../assets/divider01.png'
+
 export default function Projects() {
 
     return (
         <div className="page">
             
-            <div className="title">
-                <h3>My Recent Work</h3>
+            <div className="top-title">
+                <h2>My Recent Work</h2>
+                <img src={divider} alt=""/>
             </div>
 
             <div className="content">
@@ -21,25 +24,30 @@ export default function Projects() {
 
                 return  <div key={alpha.id} className="pCard" >
 
-                        <h5 className="title">{alpha.title}</h5>
-                        <p className="descriptor">{alpha.descriptor}</p>
+                            <h3 className="title">{alpha.title}</h3>
 
-                        <div className="image-cart">
-                            {/* <button className="image-next-button"></button> */}
-                            <img 
-                            onClick={redirector}
-                            alt="of project" 
-                            key={alpha.picture} 
-                            src={require(`../../../assets/${alpha.picture}.png`)} 
-                            className="picture" />
-                            {/* <button className="image-next-button"></button> */}
-                        </div>
-                            {/* maps out the tags  */}
-                        <div className="tag-div">
-                            {alpha.tags.map(t=>(
-                            <i className="tag" key={t}> {t} </i>)
-                            )}
-                        </div>
+                            <div className="second-block">
+                                <p className="descriptor">{alpha.descriptor}</p>
+
+                                {/* maps out the tags  */}
+                                <div className="tag-div">
+                                    {alpha.tags.map(t=>(
+                                    <><i className="tag" key={t}>{t}</i><br/></>)
+                                    )}
+                                </div>
+                            </div>
+
+                            <div className="image-cart">
+                                {/* <button className="image-next-button"></button> */}
+                                <img 
+                                onClick={redirector}
+                                alt="of project" 
+                                key={alpha.picture} 
+                                src={require(`../../../assets/${alpha.picture}.png`)} 
+                                className="picture" />
+                                {/* <button className="image-next-button"></button> */}
+                            </div>
+
                     </div>
             })}
             {/* end of content div  */}

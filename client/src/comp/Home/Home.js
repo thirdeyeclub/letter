@@ -43,11 +43,11 @@ export default function Home() {
 
                     {/* nav links  */}
                 <div className="link" onClick={openBio}>
-                    <img src={homeIcon}/> <h5>Home</h5> </div>
+                    <img src={homeIcon} alt="nav icon"/> <h5>Home</h5> </div>
                 <div className="link" onClick={openProjects}>
-                    <img src={projIcon}/> <h5>Projects</h5></div>
+                    <img src={projIcon} alt="nav icon"/> <h5>Projects</h5></div>
                 <div className="link" onClick={openContact}>
-                    <img src={contIcon}/> <h5>Contact</h5></div>
+                    <img src={contIcon} alt="nav icon"/> <h5>Contact</h5></div>
 
                 </div>
             </div>
