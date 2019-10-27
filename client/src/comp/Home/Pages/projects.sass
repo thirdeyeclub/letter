@@ -6,12 +6,17 @@
 //title for the whole page
 .top-title 
     text-align: center
-    margin: 60px 0 -10% 0
+    margin: 60px 0 -4% 0
     img
+        margin: 0 0 -12% 0
         max-width: 300px
         max-height: 300px
 
-// .content
+.content
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    margin: 4% 4%
 
 .pCard
     margin: 10% auto
@@ -19,6 +24,7 @@
     align-content: center
     padding: 0% 5%
     z-index: 2
+    width: 37%
     // border-right: outset #808080 1px
     // border-bottom: outset #808080 1px
     // box-shadow: 49px 65px 89px -73px rgba(0,0,0,0.33)
@@ -31,11 +37,12 @@
 .second-block
     display: flex
     flex-direction: row
-    padding: 0 30%
+    padding: 0 2%
+    // border: red 1px solid
 
 
 .descriptor
-    font-size: 14px
+    font-size: 12px
     margin: 5% 0
     border-right: 2px black solid
     border-radius: 
@@ -51,7 +58,7 @@
     font-size: 60%
     text-align: left
     transition: .7s
-    -webkit-text-stroke: B8C6DB black 1px
+    -webkit-text-stroke: #B8C6DB black 1px
 
 .tag:hover
     transition: .7s
@@ -59,7 +66,7 @@
 
 .image-cart
     display: flex
-    height: 300px
+    height: 210px
     width: 450px
     margin: 0 auto
     filter: brightness(88%)
@@ -71,10 +78,21 @@
 
 .picture
     border: outset 2px black
-    max-width: 450px
-    max-height: 300px
+    max-width: 320px
+    max-height: 200px
 
 .image-next-button
     background: rgba( 213, 213, 213 , .3)
     opacity: .3
     
+.call2action
+    text-align: center
+    a
+        font-size: 12px
+        cursor: pointer
+        text-decoration: underline
+        transition: 1.4s
+
+.call2action a:hover
+    transition: 2.4s
+    color: #B8C6DB

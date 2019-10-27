@@ -20,11 +20,28 @@ export default function Projects() {
                 {/* map function to create each card  */}
             {data.map( alpha => {
 
-                let redirector = () => { window.location.href = `/${alpha.link}`}
+                // takes user to the page of for the project
+                let redirector = () => { window.location.href = `/${alpha.page}`}
+                // takes user to github
+                let gitdirector = () => {window.location.href = `${alpha.gitlink}`}
+                // links user to the website
+                let webdirector = () => {window.location.href = `${alpha.weblink}`}
 
                 return  <div key={alpha.id} className="pCard" >
 
                             <h3 className="title">{alpha.title}</h3>
+
+                             <div className="image-cart">
+                                {/* <button className="image-next-button"></button> */}
+                                <img 
+                                onClick={webdirector}
+                                alt="of project" 
+                                key={alpha.picture} 
+                                src={require(`../../../assets/${alpha.picture}.png`)} 
+                                className="picture" />
+                                {/* <button className="image-next-button"></button> */}
+                            </div>
+
 
                             <div className="second-block">
                                 <p className="descriptor">{alpha.descriptor}</p>
@@ -35,21 +52,23 @@ export default function Projects() {
                                     <><i className="tag" key={t}>{t}</i><br/></>)
                                     )}
                                 </div>
+
                             </div>
 
-                            <div className="image-cart">
-                                {/* <button className="image-next-button"></button> */}
-                                <img 
-                                onClick={redirector}
-                                alt="of project" 
-                                key={alpha.picture} 
-                                src={require(`../../../assets/${alpha.picture}.png`)} 
-                                className="picture" />
-                                {/* <button className="image-next-button"></button> */}
-                            </div>
-
+                                {/* call to action */}
+                                <div className="call2action">
+                                    <a
+                                        onClick={redirector}
+                                        >Learn more
+                                        </a><br/> or <br/>
+                                    <a 
+                                        onClick={gitdirector}
+                                        >View the project on GitHub
+                                        </a>
+                                </div>
                     </div>
-            })}
+                
+            })} {/* end of map-able card  */} 
             {/* end of content div  */}
             </div>
         {/* end of page div  */}
