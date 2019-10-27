@@ -10,7 +10,8 @@ export default function Contact() {
         date: new Date(),
         sender: null,
         title: null,
-        body: null})
+        body: null,
+        origin: 'portfolio'})
 
     const changeHandler = event => {
         setEmail({ ...Email, [event.target.name]: event.target.value });
