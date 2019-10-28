@@ -1,11 +1,11 @@
 import React from 'react'
 
-export default function VR() {
+export default function Mentor() {
     return (
         <div>
-VR
+            mnetor me project over view
 
-             project overview
+            project overview
             solutions
             links
             tech stack

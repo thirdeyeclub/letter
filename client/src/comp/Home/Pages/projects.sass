@@ -1,46 +1,83 @@
+@import url('https://fonts.googleapis.com/css?family=Bitter&display=swap')  
+  
 .page
     display: flex
     flex-direction: column
 
-// .title
+    
+//title for the whole page
+.top-title 
+    text-align: center
+    margin: 0 0 0 0
+    width: 100%
+    border-bottom: black solid 1px
+    background: #ece0b9
+    img
+        margin: 0 0 0 0
+        max-width: 30%
+        max-height: 30%
+    h2
+        font-family: 'Bitter', serif
 
-
-// .content
-
+.content
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    margin: 1% 4%
+    // background: #b1badc
+    color: black
 
 .pCard
-    margin: 5% auto
+    margin: 1% auto
+    padding: 0 6%
+    border-radius: 10px
+    border-left: solid 2px black
+    border-bottom: solid 2px black
+    // border-top: solid black 2px
+    align-content: center
+    width: 26%
     // border-right: outset #808080 1px
     // border-bottom: outset #808080 1px
-    border-radius: 10px
-    align-content: center
-    box-shadow: 49px 65px 89px -73px rgba(0,0,0,0.33)
-    padding: 5%
-    z-index: 2
+    // box-shadow: 49px 65px 89px -73px rgba(0,0,0,0.33)
 
+
+//title for the cards
 .title
     text-align: center
-    margin-top: 50px
+
+.second-block
+    display: flex
+    flex-direction: row
+    padding: 0 2%
+    // border: red 1px solid
+
 
 .descriptor
-    padding: 0 15%
-    font-size: 14px
+    font-size: 12px
     margin: 5% 0
+    border-right: 2px black solid
+    border-radius: 
+    padding: 2%
+    line-height: 1.7
 
 .tag-div
-    text-align: right
-    margin: 2% 2%
+    margin: 2%
+    padding-top: 2%
+    width: 150%
 
 .tag
     font-size: 60%
-    padding: .5% 1%
-    margin: .5%
-    background: #D4D7D6
-    border-radius: 30px
+    text-align: left
+    transition: .7s
+    -webkit-text-stroke: #B8C6DB black 1px
+
+.tag:hover
+    transition: .7s
+    color: #B8C6DB
 
 .image-cart
     display: flex
-    height: 300px
+    height: 210px
     width: 450px
     margin: 0 auto
     filter: brightness(88%)
@@ -52,10 +89,23 @@
 
 .picture
     border: outset 2px black
-    max-width: 450px
-    max-height: 300px
+    max-width: 260px
+    max-height: 180px
 
 .image-next-button
     background: rgba( 213, 213, 213 , .3)
     opacity: .3
     
+.call2action
+    padding-bottom: 6%
+    align-self: flex-end
+    a
+        font-size: 12px
+        cursor: pointer
+        text-decoration: underline
+        color: #695DBD
+        transition: 1.4s
+
+.call2action a:hover
+    transition: 1.4s
+    color: #B8C6DB

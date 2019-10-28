@@ -10,7 +10,8 @@ export default function Contact() {
         date: new Date(),
         sender: null,
         title: null,
-        body: null})
+        body: null,
+        origin: 'portfolio'})
 
     const changeHandler = event => {
         setEmail({ ...Email, [event.target.name]: event.target.value });
@@ -29,10 +30,15 @@ export default function Contact() {
 
     return (
         <div className="contact-page">
-            <h3>Talk to Me</h3>
-            <p>Send me an email</p>
+
+            <h3>Work With Me</h3>
+
+            <div className="p-box">
+                <p>If you are interested in working with me, contacting me regarding a job offer, or just want to say hello you can send me a message below</p>
+            </div>
+
             <form className="form" onSubmit={sendMail}>
-                <label>Your contact information</label><br/>
+                <label className="lab">Send me an email</label><br/>
                 <input 
                     className="input" 
                     type="text" 
@@ -40,21 +46,21 @@ export default function Contact() {
                     name="sender"
                     onChange={changeHandler}/><br/>
 
-                <label>What is this regarding</label><br/>
-                <input className="input" 
-                type="textbox" 
-                placeholder="Email title..."
-                name="title"
-                onChange={changeHandler}/><br/>
+                <input 
+                    className="input" 
+                    type="textbox" 
+                    placeholder="Subject..."
+                    name="title"
+                    onChange={changeHandler}/><br/>
 
-                <label>What do you have to say:</label><br/>
-                <textarea className="input" 
-                type="textbox" 
-                placeholder="Email body..."
-                name="body"
-                onChange={changeHandler}/><br/>
+                <textarea 
+                    className="input" 
+                    type="textbox" 
+                    placeholder="Email body..."
+                    name="body"
+                    onChange={changeHandler}/><br/>
 
-                <button>send</button>
+                <button className="Abutton">SEND</button>
             </form>
         </div>
     )

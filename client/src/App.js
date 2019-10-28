@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.sass';
-import Soon from "./comp/Soon"
-// import Home from './comp/Home/Home'
 
+import Home from './comp/Home/Home'
+import Soon from './comp/Soon'
 
 class App extends Component {
   render() {

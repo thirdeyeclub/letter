@@ -1,10 +1,12 @@
-import React, {useState} from 'react'
+import React from 'react'
 import './home.sass'
 
-import Intro from './Pages/Intro';
-import Project from './Pages/Projects';
-import Contact from './Pages/Contact';
+import Pages from '../Router'
 
+// icons
+import homeIcon from '../../assets/home.svg'
+import projIcon from '../../assets/projects.svg'
+import contIcon from '../../assets/contact.svg'
 // this will handle the second thing the user sees the home page
 // i want to send them in different paths to get to "know me"
 // this will be a representation of your social mask
@@ -12,48 +14,47 @@ import Contact from './Pages/Contact';
 
 export default function Home() {
 
-    const [Bool, setBool] = useState({
-        gate_one: true , //  bio pop up
-        gate_two: false , // projects pop up
-        gate_three: false // contact pop up
-                                    })
-
-    //  center we have a short about me that will expand if clicked
-    //         left the user can go to my projects
-    //         right they can go to my contact forms
-    //         there should be more than this but this is only the prototype 
-
     const openBio = e =>{
-        if(Bool.gate_one === false){
-            setBool({gate_one: true, gate_two: false, gate_three:false})}
+        window.location.href = '/'
     }
 
     const openProjects = e =>{
-        if(Bool.gate_two === false){
-            setBool({gate_two: true, gate_one: false, gate_three: false})}
+        window.location.href = '/check-this-out'
        }
 
     const openContact = e =>{
-        if(Bool.gate_three === false){
-            setBool({gate_three: true, gate_one: false, gate_two: false})}
+        window.location.href = '/work-with-me'
         }
 
     return (
         <div className="home">
-            <div className="nav-bar">
-                <div>
+            
                     {/* side bar */}
-                <div className="picture-box">picture box</div>
-                <h5 className="link" onClick={openBio}>Home</h5>
-                <h5 className="link" onClick={openProjects}>Projects</h5>
-                <h5 className="link" onClick={openContact}>Make Contact</h5>
+            <div className="nav-bar" id="nav">
+                <div>
+                    {/* picture and header  */}
+                <div className="picture-box" id="picture-box">
+                    <b >Taylor Blount</b>
+                    <br/>
+                    <i>Web Developer tagline</i>
+                    <br/>
+                    <p id="initials">T B</p>     
+                </div>
+
+                    {/* nav links  */}
+                <div className="link" onClick={openBio}>
+                    <img src={homeIcon} alt="nav icon"/> <h5>Home</h5> </div>
+                <div className="link" onClick={openProjects}>
+                    <img src={projIcon} alt="nav icon"/> <h5>Projects</h5></div>
+                <div className="link" onClick={openContact}>
+                    <img src={contIcon} alt="nav icon"/> <h5>Contact</h5></div>
+
                 </div>
             </div>
 
+                {/* all pages  */}
             <div className="main" id="main">
-            {Bool.gate_one ? <Intro className="slide"/> : null}
-            {Bool.gate_two ? <Project className="slide"/> : null}
-            {Bool.gate_three ? <Contact className="slide"/> : null}
+            <Pages />
             </div>
         </div>
     )
