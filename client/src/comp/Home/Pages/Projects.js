@@ -57,13 +57,13 @@ export default function Projects() {
 
                                 {/* call to action */}
                                 <div className="call2action">
-                                    <a
-                                        onClick={redirector}
-                                        >Learn more
-                                        </a><br/> or <br/>
                                     <a 
                                         onClick={gitdirector}
                                         >View the project on GitHub
+                                        </a><br/> or 
+                                    <a
+                                        onClick={redirector}
+                                        > Learn more
                                         </a>
                                 </div>
                     </div>
