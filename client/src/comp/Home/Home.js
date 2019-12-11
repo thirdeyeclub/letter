@@ -34,9 +34,11 @@ export default function Home() {
                 <div>
                     {/* picture and header  */}
                 <div className="picture-box" id="picture-box">
+                    <br/>
+                    <br/>
                     <b >Taylor Blount</b>
                     <br/>
-                    <i>Web Developer tagline</i>
+                    <i>Agile Problem Solving</i>
                     <br/>
                     <p id="initials">T B</p>     
                 </div>
