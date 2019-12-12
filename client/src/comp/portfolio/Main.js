@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Particles from "react-particles-js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {faGooglePlusG,faFacebookF,faLinkedinIn,faGithub,   faReact, faNode,   faHtml5,  faJs,  faNodeJs,   faQuora, faSass, faGitAlt} from "@fortawesome/free-brands-svg-icons";
+import { faLinkedinIn,faGithub,   faReact, faNode,   faHtml5,  faJs,  faNodeJs,  faSass, faGitAlt} from "@fortawesome/free-brands-svg-icons";
 import {faDownload,faChevronCircleDown,faCode, faGraduationCap,faUniversity,faInfoCircle,faPlayCircle,faHeart, faEnvelope} from "@fortawesome/free-solid-svg-icons";
 import { VerticalTimeline,VerticalTimelineElement } from "react-vertical-timeline-component";
 import ReactCardFlip from "react-card-flip";
@@ -133,7 +133,7 @@ function Main() {
 
   // span style to make words blacked out
   const HiddenStyle = {
-      color: 'black'
+
   }
 
   // onClick for links
@@ -160,7 +160,7 @@ function Main() {
             Taylor Blount
             <br />
           </h1>
-          <h3><span style={HiddenStyle}>Connecting</span><br/> Software Developer<span style={HiddenStyle}><br/>People</span> <span style={HiddenStyle}>Globally</span></h3>
+          <h3><span className="hidden-style" style={HiddenStyle}>connecting</span><br/> Software Developer<span className="hidden-style" style={HiddenStyle}><br/>people</span>    <span className="hidden-style" style={HiddenStyle}>globally</span></h3>
           <div className="icon-container">
             <a
               title="Linkedin"
