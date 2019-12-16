@@ -157,8 +157,7 @@ function Main() {
 
         <div className="header">
           <h1>
-            Taylor Blount
-            <br />
+            Taylor<br /> Blount            
           </h1>
           <h3><span className="hidden-style" style={HiddenStyle}>connecting</span><br/> Software Developer<span className="hidden-style" style={HiddenStyle}><br/>people</span>    <span className="hidden-style" style={HiddenStyle}>globally</span></h3>
           <div className="icon-container">
