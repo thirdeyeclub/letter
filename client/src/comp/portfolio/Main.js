@@ -17,7 +17,7 @@ const resume = require("./resume/Taylor_Blount's_resume_2020.pdf");
 let particleconfig = {
   particles: {
     number: {
-      value: 33,
+      value: 10,
       density: {
         enable: true,
         value_area: 111
@@ -159,7 +159,15 @@ function Main() {
           <h1>
             Taylor<br /> Blount            
           </h1>
-          <h3><span className="hidden-style" style={HiddenStyle}>connecting</span><br/> Software Developer<span className="hidden-style" style={HiddenStyle}><br/>people</span>    <span className="hidden-style" style={HiddenStyle}>globally</span></h3>
+          <h3><span className="hidden-style" style={HiddenStyle}>
+            {/* connecting */}
+            </span><br/> 
+            Software Developer<span className="hidden-style" style={HiddenStyle}>
+              <br/>
+              {/* people */}
+              </span>    <span className="hidden-style" style={HiddenStyle}>
+                {/* globally */}
+                </span></h3>
           <div className="icon-container">
             <a
               title="Linkedin"
