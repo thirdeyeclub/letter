@@ -255,7 +255,7 @@ function Main() {
 
       {/*------------Work Timeline-------- */}
 
-      <div className="timeline">
+      {/* <div className="timeline">
         <h1>Timeline</h1>
         <VerticalTimeline>
           <VerticalTimelineElement
@@ -341,7 +341,7 @@ function Main() {
           </VerticalTimelineElement>
 
         </VerticalTimeline>
-      </div>
+      </div> */}
       {/*------------Projects---------------*/}
       <div id="projects" className="projects">
         <h1>Projects</h1>
