@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import Particles from "react-particles-js";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedinIn,faGithub,   faReact, faNode,   faHtml5,  faJs,  faNodeJs,  faSass, faGitAlt} from "@fortawesome/free-brands-svg-icons";
-import {faDownload,faChevronCircleDown,faCode, faGraduationCap,faUniversity,faInfoCircle,faPlayCircle,faHeart, faEnvelope} from "@fortawesome/free-solid-svg-icons";
-import { VerticalTimeline,VerticalTimelineElement } from "react-vertical-timeline-component";
+import { faLinkedinIn,faGithub,   faReact, faNode,    faJs,   faSass, faGitAlt} from "@fortawesome/free-brands-svg-icons";
+import {faDownload,faChevronCircleDown,faCode, faInfoCircle,faPlayCircle,faHeart, faEnvelope} from "@fortawesome/free-solid-svg-icons";
+// import { VerticalTimeline,VerticalTimelineElement } from "react-vertical-timeline-component";
 import ReactCardFlip from "react-card-flip";
 import "react-vertical-timeline-component/style.min.css";
-import "./App.css";
+import "./main.css";
 
-import ContactMe from '../../assets/contact.svg'
+// import ContactMe from '../../assets/contact.svg'
 
 const postgres = require("./images/postgresql.png");
 const resume = require("./resume/Taylor_Blount's_resume_2020.pdf");
@@ -133,21 +133,20 @@ function Main() {
 
   // span style to make words blacked out
   const HiddenStyle = {
-
-  }
-
+ }
+ console.log("Hello! How you are doing today?\n\nRemember no matter where you go carry enough love with you to give away, just enough to put a smile on someones face.")
   // onClick for links
-  function linkToSup(){
-      window.location.href ="https://supp2u.netlify.com/"
-  }
+  // function linkToSup(){
+  //     window.location.href ="https://supp2u.netlify.com/"
+  // }
 
-  function linkToLS(){
-      window.location.href ="https://supp2u.netlify.com/"
-  }
+  // function linkToLS(){
+  //     window.location.href ="https://supp2u.netlify.com/"
+  // }
 
-  function linkToSlackr(){
-      window.location.href ="https://slackrs-app.netlify.com/"
-  }
+  // function linkToSlackr(){
+  //     window.location.href ="https://slackrs-app.netlify.com/"
+  // }
 
   return (
     <div className="App">
@@ -179,11 +178,11 @@ function Main() {
             </a>
             <a
               title="Contact Me"
-              className="contact-icon-fa"
+              className="fa"
               href="mailto:blount3taylor@gmail.com"
               target="new"
             >
-              <img className="contact-icon-container" alt="send me a message" src={ContactMe} />
+              <FontAwesomeIcon icon={faEnvelope} />
             </a>
             <a
               title="Github"
@@ -220,7 +219,7 @@ function Main() {
           I am an experienced Agile Developer and Tech Lead. I primarily work with
           Web Applications , using <b>Node Js</b> or <b>Ruby on Rails</b> or <b>Flask</b> [for Backend] and <b>postgreSQL</b>
            or <b>MongoDB</b> [for DBMS]. I am creative and detail oriented, well versed in Frontend libraries such as <b>React Js</b>. 
-           My preferred languages are <b>JavaScript, Python, and Ruby</b>. Although I have experince with many more under my belt.
+           My preferred languages are <b>JavaScript, Python, and Ruby</b>. Although I have experience with many more under my belt.
            I am passionate about creating a better more open world for all of us to enjoy and <b>collaborate</b> in.
         </p>
         <p>
@@ -344,8 +343,8 @@ function Main() {
       </div> */}
       {/*------------Projects---------------*/}
       <div id="projects" className="projects">
-        <h1>Projects</h1>
-        <h2 style={{ maxWidth: "90%" }}>
+        {/* <h1>Projects</h1> */}
+        <h2 style={{ maxWidth: "90%" , fontSize: "4vh"}}>
         Checkout some of my latest projects.
         </h2>
         <div className="project-content">
@@ -367,14 +366,14 @@ function Main() {
                 className="front"
               />
               <div className="reverse" key="back">
-                <h4>
+                <h2>
                 Connecting restaurants and food lovers together. This platform provides a way for bushiness owners to advertise themselves as well as allowing customers to rate and review those business.
-                </h4>
+                </h2>
                 <h2>Developed with React Js, Ruby on Rails & postgreSQL</h2>
-                <h3>
-                  For Testing : Server Deployed on Heroku, DBMS hosted with
+                <h2>
+                  Server Deployed on Heroku, DBMS hosted with
                   Heroku postgeSQL and Front End Hosted with Netlify
-                </h3>
+                </h2>
               </div>
             </ReactCardFlip>
 
@@ -415,12 +414,12 @@ function Main() {
                 alt="Stay Safe"
               />
               <div className="reverse" key="back">
-                <h1>
+                <h2>
                 The LiveSafe project gives users a one-stop shop for quantifying the risks of natural disasters.
-                </h1>
-                <h1>Developed with React Js & Node Js</h1>
+                </h2>
+                <h2>Developed with React Js & Node Js</h2>
                 <h2>Uses Mapbox and Data Analytics to create an interactive map of American Counties</h2>
-                <h3>Deployed via Netlify</h3>
+                <h2>Deployed via Netlify</h2>
               </div>
             </ReactCardFlip>
 
@@ -461,11 +460,11 @@ function Main() {
                 alt="Fund Me"
               />
               <div className="reverse" key="back">
-                <h3>
+                <h2>
                 A platform for crowdfunding ideas and projects in the virtual reality space. Featuring an API serving five client's applications built as a solution for the  data storage and interaction for Lambda's Build Week
-                </h3>
+                </h2>
                 <h2>Developed with React Js & Node Js</h2>
-                <h3>Deployed on Netlify & a postgreSQL hosted on Heroku</h3>
+                <h2>Deployed on Netlify & a postgreSQL hosted on Heroku</h2>
               </div>
             </ReactCardFlip>
 
@@ -506,11 +505,11 @@ function Main() {
                 alt="T & P"
               />
               <div className="reverse" key="back">
-                <h3>
+                <h2>
                 An application that helps managers run their daily standup reports asynchronously. Our application will help the whole team and best of all, it is completely free to start!
-                </h3>
+                </h2>
                 <h2>Developed with React Js and Integrated with Slack</h2>
-                <h3>Deployed on Netlify</h3>
+                <h2>Deployed on Netlify</h2>
               </div>
             </ReactCardFlip>
 
