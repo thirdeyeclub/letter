@@ -341,6 +341,13 @@ function Main() {
 
         </VerticalTimeline>
       </div> */}
+      {/* what am I currently doing  */}
+      <div className="current-status">
+      <h2 className="current-status-h2" style={{ fontSize: "4vh", marginTop: "75px"}}>
+      What I am currently working on.
+      </h2>
+      <p className="current-status-text"> I am leading a team of 7 engineers in Lambda's Labs Program, helping team develop, test, and maintain a Node based ECommerce platform. We are using a React and Next JS combo for our frontend. We are working along side one of the printing industries best companies.</p>
+      </div>
       {/*------------Projects---------------*/}
       <div id="projects" className="projects">
         {/* <h1>Projects</h1> */}
