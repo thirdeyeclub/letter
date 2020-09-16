@@ -346,7 +346,7 @@ function Main() {
       <h2 className="current-status-h2" style={{ fontSize: "4vh", marginTop: "75px", fontWeight: 'bolder'}}>
       What I am currently working on.
       </h2>
-      <p className="current-status-text">I am helping build software, writing scripts, and debugging code for mutual aid groups, both local and national.</p>
+      <p className="current-status-text">I am helping build software, write scripts, and debug code for mutual aid groups, both local and national.</p>
       </div>
       {/*------------Projects---------------*/}
   
