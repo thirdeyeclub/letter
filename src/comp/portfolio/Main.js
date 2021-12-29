@@ -11,7 +11,7 @@ import "./main.css";
 // import ContactMe from '../../assets/contact.svg'
 
 const postgres = require("./images/postgresql.png");
-const resume = require("./resume/Taylor_Blount's_resume_2020.pdf");
+const resume = require("./resume/Taylor_Blount's_resume_2022.pdf");
 
 // contorls all the particles
 let particleconfig = {
@@ -342,19 +342,16 @@ function Main() {
         </VerticalTimeline>
       </div> */}
       {/* what am I currently doing  */}
-      <div className="current-status">
+      {/* <div className="current-status">
       <h2 className="current-status-h2" style={{ fontSize: "4vh", marginTop: "75px", fontWeight: 'bolder'}}>
       What I am currently working on.
       </h2>
-      <p className="current-status-text">I am helping build software, write scripts, and debug code for mutual aid groups, both local and national.</p>
-      </div>
+      <p className="current-status-text"></p>
+      </div> */}
       {/*------------Projects---------------*/}
   
       <div id="projects" className="projects">
         {/* <h1>Projects</h1> */}
-        <h2 style={{ maxWidth: "90%" , fontSize: "4vh", fontWeight: 'bolder'}}>
-        Checkout some of my latest projects.
-        </h2>
         <div className="project-content">
           <div
             className="project-item"
